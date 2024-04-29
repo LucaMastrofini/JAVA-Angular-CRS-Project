@@ -1,0 +1,31 @@
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Create Course</h3>
+            
+        </div>
+        <div class="col-md-6">
+            <h3>Courses</h3>
+            <br>
+            <div *ngFor = "let course of courseArray" class="card" style="margin-bottom: 16px">
+                <div class="card-header">
+                    ID: {{course.courseID}}   
+                </div>
+                <div class="card-body">
+                  <h3 class="card-text">{{course.name}}</h3>
+                  <p class="card-text">Department: {{course.department}}</p>
+                  <p>{{course.description}}</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-primary" (click)="updateCourse(course)">Edit</button>&nbsp;<button type="button" class="btn btn-danger" (click)="deleteCourse(course)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+    
+
+
+
+

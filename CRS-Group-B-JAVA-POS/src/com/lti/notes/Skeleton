@@ -1,0 +1,17 @@
+Beans 
+
+Student: Id, courses, alternateCourses, gradeCourses, username, password
+Course: Id, Students, prefessor, department, prerequisites
+Professor: Id, courses, username, password
+Admin: Id, username, password
+Catalog: courses
+Payment: Id, Student, Amount
+
+Service
+
+StudentService: applyToCourse, dropCourse, listAppliedCourses, makePayment, checkGrades, listAllCourses
+CourseService: getNumberStudents, notifyStudent
+ProfessorService: applyToCourse, recordGrades, checkStudents, 
+AdminService: createCourse, checkStudentPayment, updateCourses, deleteCourses, listCourses
+CatalogService: listCoursesByDepartment, listAllCourses 
+PaymentService: validatePayment, 

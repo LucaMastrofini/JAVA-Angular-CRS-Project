@@ -1,0 +1,5 @@
+{
+    "/students/list":"/students",
+    "/students/register/:studentid": "/students/:studentid",
+    "/students/reject/:studentid": "students/:studentid"
+}

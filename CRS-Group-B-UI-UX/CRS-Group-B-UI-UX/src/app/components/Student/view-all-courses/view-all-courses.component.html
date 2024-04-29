@@ -1,0 +1,40 @@
+<div class="col-md-12">
+    <h3 appCenter>All Courses</h3>
+    <br>
+    <div class="container">
+        <div class="row">
+            <!-- *ngFor="let course of getData" -->
+            <div *ngFor="let course of allCourses" class="col-md-4">
+                <div class="card" style="margin-bottom: 16px">
+                    <div class="card-header p-2">
+                        ID: {{course.courseID}}
+                    </div>
+                    <div class="card-body p-2">
+                        <h3 class="card-text">{{course.name}}</h3>
+                        <p class="card-text">Department: {{course.department}}</p>
+                        <p>{{course.description}}</p>
+                    </div>
+                    <div class="card-footer p-2">
+                        <div class="container p-0">
+                            <div class="row">
+                                <div class="col-9 p-2">
+                                </div>
+                                <!-- *"  -->
+                                <div *ngIf="!(isApplied(course))" class="d-flex flex-row-reverse p-2">
+                                    <button type="button" class="btn-sm btn-blue p-1"
+                                        (click)="applyToCourse(course)">Apply</button>
+                                    <!-- <button ng-show="myCourses.includes(course)">some text</button><button ng-show="!myCourses.includes(course)">some other text</button> -->
+                                </div>
+                                <div *ngIf="(isApplied(course))" class="d-flex flex-row-reverse p-2">
+                                    <button type="button" class="btn-sm btn-red p-1"
+                                        (click)="goToAppliedCourses()">Drop</button>
+                                    <!-- <button ng-show="myCourses.includes(course)">some text</button><button ng-show="!myCourses.includes(course)">some other text</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

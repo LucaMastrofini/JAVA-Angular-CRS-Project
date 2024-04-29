@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>CRS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md" style="padding-bottom: 0px;  padding-top: 0px;  padding-right: 0px;  padding-left: 0px;  height: 50px;">
+      <div class="container-fluid nav-div">
+
+        <a class="navbar-link" href="#" style="padding-bottom: 15px; padding-left: 15px;  padding-top: 15px;  padding-right: 15px; height: 50px, color:white;" >Home</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-bars" style="color: white"></i></button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a href="#login" data-toggle="modal" data-target="#login" class="nav-link" style="padding-bottom: 15px; padding-left: 15px;  padding-top: 15px;  padding-right: 15px; height: 50px, color:white;">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Admin Portal</h1>
+      <p class="lead">Add, update, delete courses, register professor and approve student registrations</p>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+       <button class="btn btn-block btn-light">
+         <a type="button" href="#create-course" data-toggle="modal" data-target="#create-course" style="font-size: 20px;" title="Create Game" >
+           <div class="mb-1" style="text-align: center;">
+             Create Course <i class="fa fa-plus"></i>
+           </div>
+         </a>
+       </button>
+       <button class="btn btn-block btn-light">
+         <a type="button"  href="#update-course" data-toggle="modal" data-target="#update-course" style="font-size: 20px;" title="Create Game" >
+           <div class="mb-1" style="text-align: center;">
+             Update Course <i class="fa fa-pen"></i>
+           </div>
+         </a>
+       </button>
+       <button class="btn btn-block btn-light">
+         <a type="button" href="#delete-course" data-toggle="modal" data-target="#delete-course" style="font-size: 20px;" title="Create Game" >
+           <div class="mb-1" style="text-align: center;">
+             Delete Course <i class="fa fa-trash"></i>
+           </div>
+         </a>
+       </button>
+       <button class="btn btn-block btn-light">
+         <a type="button" href="#create-professor" data-toggle="modal" data-target="#create-professor" style="font-size: 20px;" title="Create Game" >
+           <div class="mb-1" style="text-align: center;">
+             Create Professor <i class="fa fa-user-tie"></i>
+           </div>
+         </a>
+       </button>
+       <button class="btn btn-block btn-light">
+         <a type="button" href="#approve-registration" data-toggle="modal" data-target="#approve-registration" style="font-size: 20px;" title="Create Game" >
+           <div class="mb-1" style="text-align: center;">
+             Approve Registration <i class="fa fa-thumbs-up"></i>
+           </div>
+         </a>
+       </button>
+     </div>
+
+     <div class="col-md-9">
+         <h3 class="text-center">Unregistered Students</h3>
+         <br>
+         <table class="table">
+          <thead class="table-head">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- create course modal -->
+  <div id="create-course" class="modal fade login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header myheader">
+          <h2 class="modal-title">Create Course</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!--action form-->
+          <form action="" method="POST" id="login">
+            <div class="form-group">
+              <label>Course Name</label>
+              <input class="form-control" id="username" name="username" type="text" placeholder="Enter Username"  required>
+            </div>
+            <div class="form-group">
+              <label>Course Department</label>
+              <input class="form-control" id="department" name="department" type="text" required>
+            </div>
+            <div class="form-group">
+              <label>Course Name</label>
+              <textarea class="form-control" id="description" name="description">Enter the course description</textarea>
+            </div>
+            <div class="form-group">
+              <label>Course ID prerequisite</label>
+              <input class="form-control" id="username" name="username" type="number" placeholder="Enter Username"  required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" name="login-submit" id="login-submit">create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- update course modal -->
+  <div id="update-course" class="modal fade login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header myheader">
+          <h2 class="modal-title">Update Course</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!--action form-->
+          <form action="" method="POST" id="login">
+            <div class="form-group">
+              <label>Course ID</label>
+              <input class="form-control" id="courseID" name="courseID" type="number" placeholder="Enter Course ID"  required>
+            </div>
+            <div class="form-group">
+              <label>Course Name</label>
+              <input class="form-control" id="username" name="username" type="text" placeholder="Enter Username"  required>
+            </div>
+            <div class="form-group">
+              <label>Course Department</label>
+              <input class="form-control" id="department" name="department" type="text" required>
+            </div>
+            <div class="form-group">
+              <label>Course Name</label>
+              <textarea class="form-control" id="description" name="description">Enter the course description</textarea>
+            </div>
+            <div class="form-group">
+              <label>Course ID prerequisite</label>
+              <input class="form-control" id="username" name="username" type="number" placeholder="Enter Username"  required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" name="login-submit" id="login-submit">update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- delete course -->
+  <div id="delete-course" class="modal fade login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header myheader">
+          <h2 class="modal-title">Delete Course</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!--action form-->
+          <form action="" method="POST" id="login">
+            <div class="form-group">
+              <label>Course ID</label>
+              <input class="form-control" id="courseID" name="courseID" type="number" placeholder="Enter Course ID"  required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" name="login-submit" id="login-submit">delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="create-professor" class="modal fade login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header myheader">
+          <h2 class="modal-title">Create Professor</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!--action form-->
+          <form action="" method="POST" id="login">
+            <div class="form-group">
+              <label>Name</label>
+              <input class="form-control" id="name" name="name" type="text" placeholder="Enter Professor name"  required>
+            </div>
+            <div class="form-group">
+              <label>Username</label>
+              <input class="form-control" id="username" name="username" type="text" placeholder="Enter Username"  required>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input class="form-control" id="password" name="password" type="password" placeholder="Enter Password" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" name="login-submit" id="login-submit">create professor</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--approve student registration-->
+  <div id="approve-registration" class="modal fade login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header myheader">
+          <h2 class="modal-title">Approve Registration</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!--action form-->
+          <form action="" method="POST" id="login">
+            <div class="form-group">
+              <label>Student ID</label>
+              <input class="form-control" id="courseID" name="courseID" type="number" placeholder="Enter Student ID"  required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" name="login-submit" id="login-submit">approve</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

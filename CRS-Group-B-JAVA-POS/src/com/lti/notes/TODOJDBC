@@ -1,0 +1,90 @@
+Student 
+
+1. applyToCourse
+	display courses
+	ask which course to apply
+	check course size
+	check if student isn't registred
+	add student to course roster dao
+
+2. dropCourse
+	display student courses
+	ask course to remove
+	remove student from course roster dao
+
+3. viewAppliedCourses
+	display all courses you applied for
+
+4. makePayment
+	display courses from course roster where studentID and payed = false
+	call method from PaymentService makePayment(studentId)
+		display amount
+		update all courses of student with payed to true.
+	
+5. checkGrades
+	display grades for each course student applied to
+	
+6. listAllCourses
+	display all courses
+	
+Admin 
+
+1. createCourse
+	ask information (name, department, prereqID) -> on app
+	call service to save course in dao
+
+2. updateCourse
+	ask for id -> on app
+	ask for information -> on app
+	call service to update in dao
+
+3. deleteCourse
+	ask for id ->
+	call service to delete in dao
+	
+4. listAllCourses
+	call service method
+	display all courses
+	
+5. approveStudentRegistration
+	add attribute boolean registrationApproved to student (Table and bean)
+	add to studentDAO method viewUnapprovedStudents -> returns list of all students with 
+		registrationApproved = false
+	select student id
+	call adminService to update student registration(int studentId)
+	add to studentDao method approveStudentRegistration(int studentId)
+	UPDATE registrationApproved FROM STUDENT WHERE ID = studentId:
+
+6. createProfessor
+	ask information
+	call service to save professor in dao
+	
+Professor
+
+1. applyToCourse
+	display courses available
+	ask for course id
+	call service method to update course 
+	parameters (professor id, course id)
+	
+2. checkStudents
+	display courses registered to
+	ask for course id
+	call service method (professor id, course id)
+	
+3. recordGrade
+	display courses registered to
+	ask for course id
+	display students registered to course
+	ask for student id
+	ask for grade
+	call service method to update course roster
+	parameters (grade, studentID, courseID)
+	
+	Problems
+
+
+Make payment doesn't show unpayed courses -- Done
+add professor to course throws key exception error -- Done??
+admin creating course: Column count doesn't match value count at row 1
+need to add on delete cascade on update cascade; -- done -- need to update individual dbs

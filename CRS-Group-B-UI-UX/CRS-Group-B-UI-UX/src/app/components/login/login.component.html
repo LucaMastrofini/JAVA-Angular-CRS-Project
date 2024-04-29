@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+            <div *ngIf="errors.loginFail" class="alert alert-danger">
+                {{errors.loginFail}}
+            </div>
+            <h3>Login</h3>
+            <form [formGroup]="registerForm" (ngSubmit)="loginUser()">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Username</label>
+                        <input type="text" formControlName="username" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+                        <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                            <div *ngIf="f['username'].errors['required']">Username is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">Password is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="role">Role</label>
+                        <select class="form-select" formControlName="role"
+                            [ngClass]="{ 'is-invalid': submitted && f['role'].errors }">
+                            <option value=1>Admin</option>
+                            <option value=2>Professor</option>
+                            <option value=3>Student</option>
+                        </select>
+                        <div *ngIf="submitted && f['role'].errors" class="invalid-feedback">
+                            <div *ngIf="f['role'].errors['required']">Role is required</div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="text-end">
+                    <button class="btn btn-blue p-1 py-2">Login</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<div class="container p-4">
+
+</div>

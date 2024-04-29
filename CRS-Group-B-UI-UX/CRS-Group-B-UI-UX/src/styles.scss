@@ -1,0 +1,189 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$CRS-Group-B-UI-UX-primary: mat.define-palette(mat.$indigo-palette);
+$CRS-Group-B-UI-UX-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$CRS-Group-B-UI-UX-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$CRS-Group-B-UI-UX-theme: mat.define-light-theme((color: (primary: $CRS-Group-B-UI-UX-primary,
+        accent: $CRS-Group-B-UI-UX-accent,
+        warn: $CRS-Group-B-UI-UX-warn,
+      )));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($CRS-Group-B-UI-UX-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
+@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.card {
+  padding: 8px !important;
+}
+
+.home-bg{
+  background: url(../src/assets/images/home-dashboard.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.student-bg{
+  background: url(../src/assets/images/student-dashboard.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.admin-bg{
+  background: url(../src/assets/images/admin-dashboard.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.professor-bg{
+  background: url(../src/assets/images/professor-dashboard.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.btn-blue { 
+  color: #FFFFFF; 
+  background-color: #5D75E2; 
+  border-color: #5D75E2;
+  width: 20%; 
+} 
+ 
+.btn-blue:hover, 
+.btn-blue:focus, 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  color: #FFFFFF; 
+  background-color: #4C62C7; 
+  border-color: #5D75E2; 
+} 
+ 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  background-image: none; 
+} 
+ 
+.btn-blue.disabled, 
+.btn-blue[disabled], 
+fieldset[disabled] .btn-blue, 
+.btn-blue.disabled:hover, 
+.btn-blue[disabled]:hover, 
+fieldset[disabled] .btn-blue:hover, 
+.btn-blue.disabled:focus, 
+.btn-blue[disabled]:focus, 
+fieldset[disabled] .btn-blue:focus, 
+.btn-blue.disabled:active, 
+.btn-blue[disabled]:active, 
+fieldset[disabled] .btn-blue:active, 
+.btn-blue.disabled.active, 
+.btn-blue[disabled].active, 
+fieldset[disabled] .btn-blue.active { 
+  background-color: #5D75E2; 
+  border-color: #5D75E2; 
+} 
+ 
+.btn-blue .badge { 
+  color: #5D75E2; 
+  background-color: #FFFFFF; 
+}
+
+.btn-red { 
+  color: #FFFFFF; 
+  background-color: #F65868; 
+  border-color: #F65868; 
+  width:20%;
+} 
+ 
+.btn-red:hover, 
+.btn-red:focus, 
+.btn-red:active, 
+.btn-red.active, 
+.open .dropdown-toggle.btn-red { 
+  color: #FFFFFF; 
+  background-color: #F05262; 
+  border-color: #F65868; 
+} 
+ 
+.btn-red:active, 
+.btn-red.active, 
+.open .dropdown-toggle.btn-red { 
+  background-image: none; 
+} 
+ 
+.btn-red.disabled, 
+.btn-red[disabled], 
+fieldset[disabled] .btn-red, 
+.btn-red.disabled:hover, 
+.btn-red[disabled]:hover, 
+fieldset[disabled] .btn-red:hover, 
+.btn-red.disabled:focus, 
+.btn-red[disabled]:focus, 
+fieldset[disabled] .btn-red:focus, 
+.btn-red.disabled:active, 
+.btn-red[disabled]:active, 
+fieldset[disabled] .btn-red:active, 
+.btn-red.disabled.active, 
+.btn-red[disabled].active, 
+fieldset[disabled] .btn-red.active { 
+  background-color: #F65868; 
+  border-color: #F65868; 
+} 
+ 
+.btn-red .badge { 
+  color: #F65868; 
+  background-color: #FFFFFF; 
+}

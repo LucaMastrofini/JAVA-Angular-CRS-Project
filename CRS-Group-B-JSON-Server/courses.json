@@ -1,0 +1,22 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "courseID": 1,
+      "name": "Math3008",
+      "department": "Mathematics",
+      "description": "Mathematic",
+      "professorID": 0,
+      "prereqID": 0
+    },
+    {
+      "courseID": 2,
+      "name": "Chemistry",
+      "description": "chemestry",
+      "department": "jdjjdjdjd",
+      "professorID": 0,
+      "prereqID": 0,
+      "id": 2
+    }
+  ]
+}

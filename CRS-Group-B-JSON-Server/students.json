@@ -1,0 +1,16 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "studentID": 1,
+      "name": "Luca",
+      "isRegistered": false
+    },
+    {
+      "id": 4,
+      "studentID": 4,
+      "name": "Seb",
+      "isRegistered": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<h3 appCenter>Professors</h3>
+<br>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let professor of getData" class="col-md-4">
+            <div class="card" style="margin-bottom: 16px">
+                <div class="card-body">
+                    <h3 class="card-text">{{professor.name}}</h3>
+                    <h5 class="card-text">ID: {{professor.professorID}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

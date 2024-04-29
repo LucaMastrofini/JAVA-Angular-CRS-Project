@@ -1,0 +1,68 @@
+Student Service
+
+1. applyToCourse
+	ask which course -> on app
+	add student to course (check size >10)
+	add course to student courses
+
+2. dropCourse
+	display your courses -> on app
+	ask course -> on app
+	remove course from student courses
+	remove student from course
+
+3. viewAppliedCourses
+	display all courses you applied for
+	
+4. makePayment
+	...
+	
+5. checkGrades
+	view for each applied course the grade you have
+	
+6. listAllCourses
+	display all courses
+
+Admin Service
+	
+1. createCourse(ID, name, department, prereqID)
+	ask information (name, department) -> on app
+	get arrayList length and generate ID -> on app
+	call method createCourse returns a course
+	add newly created course to arrayList in app
+		
+2. updateCourse(ID, name, department, prereqID)
+	ask ID (needs validation)
+	get(id) from arrayList (or hashmap).
+	display old info
+	ask for name change (if blank don't change)
+	ask for department	(if blank don't change)
+	
+3. deleteCourse(allCourses, ID)
+	ask for ID
+	if correct remove from Collection
+
+4. listAllCourses()
+	display all courses
+
+5. approveStudentRegistration
+	...
+	
+6. createProfessor(profID)
+	get size of professors -> profID (in menu)
+	add return to professor list
+	
+Professor Service
+
+1. applyToCourse(ID)
+	if listed in collection add professor to course
+	professor in course must be null
+	
+2. checkStudents(course ID)
+	view all students of course ID
+	
+3. recordGrade(grade, studentID, courseID)
+	ask student ID
+	get student by ID 
+	in student courses get course by ID
+	insert in course the grade

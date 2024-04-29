@@ -1,0 +1,78 @@
+
+LOGIN
+PostMapping(/login)
+JSON: role, username, password
+Check valid credentials
+Create instance of user
+
+STUDENT REGISTRATION
+PostMapping(/studentRegistration)
+JSON: username, password
+Save in dao the new student
+
+PASSWORD RESET
+PostMapping(/passwordReset)
+JSON: username, id, password
+
+LOGOUT
+GetMapping(/logout)
+set Instance of user to null;
+
+VIEW ALL COURSES
+GetMapping(/viewAllCourses)
+
+ADMIN
+
+CREATE COURSE
+PostMapping(/createCourse)
+JSON: coursename, courseDepartment, description, prereqID
+
+UPDATE COURSE
+PutMapping(/updateCourse/{id})
+JSON: coursename, courseDepartment, description, prereqID
+
+DELETE COURSE
+DeleteMapping(/deleteCourse/{id})
+
+CREATE PROFESSOR
+PostMapping(/createProfessor)
+JSON: professorName, username, password
+
+APPROVE REGISTRATION
+PutMapping(/approveRegistration/{id})
+
+
+
+
+PROFESSOR
+
+APPLYTOCOURSE
+PutMapping(/applyToCourseProfessor/{courseID})
+
+RECORD GRADE
+PutMapping(/recordGrade/{studentID}/{courseID}/{grade})
+
+VIEW STUDENTS
+getMapping(/viewStudents/{courseID})
+
+STUDENT
+
+APPYTOCOURSE
+PutMapping(/applyToCourseStudent/{courseID})
+
+DROPCOURSE
+DeleteMapping(/dropCourse/{courseID})
+
+VIEW APPLIED COURSES
+GetMapping(/viewAppliedCourses)
+
+MAKE PAYMENT
+PutMapping(/makePayment/{courseID})
+
+CHECK GRADES
+GetMapping(/checkGrades)
+
+=====================================================
+
+user credentials must throw an error when user types an username that doesn't exist.  
+

@@ -1,0 +1,33 @@
+<div class="row">
+    <h3 appCenter>Unregistered Students</h3>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let student of getData" class="col-md-4">
+                <div *ngIf="!student.registrationApproved" style="margin-bottom: 16px">
+                    <div class="card pt-2">
+                        <div class="card-header">
+                            ID: {{student.studentID}}
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-text">{{student.name}}</h3>
+                        </div>
+                        <div class="card-footer">
+                            <div class="container p-0">
+                                <div class="row">
+                                    <div class="d-flex flex-row-reverse">
+                                        <button type="button" class="btn-sm btn-blue p-1 m-1"
+                                            (click)="confirmRegistration(student)">Approve</button>
+                                    
+                                        <button type="button" class="btn-sm btn-red p-1 m-1"
+                                            (click)="rejectRegistration(student)">Reject</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

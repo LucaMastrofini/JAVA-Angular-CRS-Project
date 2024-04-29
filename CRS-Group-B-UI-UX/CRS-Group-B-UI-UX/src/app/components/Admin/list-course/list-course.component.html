@@ -1,0 +1,33 @@
+<div class="col-md-12">
+    <h3 appCenter>Courses</h3>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let course of getData" class="col-md-4">
+                <div class="card" style="margin-bottom: 16px">
+                    <div class="card-header p-2">
+                        ID: {{course.courseID}}
+                    </div>
+                    <div class="card-body p-2">
+                        <h3 class="card-text">{{course.name}}</h3>
+                        <p class="card-text">Department: {{course.department}}</p>
+                        <p>{{course.description}}</p>
+                    </div>
+                    <div class="card-footer p-2">
+                        <div class="container p-0">
+                            <div class="row">
+                                <div class="d-inline-flex flex-row-reverse p-2">
+                                    <button type="button" class="btn-sm btn-blue p-1 m-1"
+                                        (click)="saveInfo(course)">Edit</button>
+                            
+                                    <button type="button" class="btn-sm btn-red p-1 m-1"
+                                        (click)="deleteCourse(course)">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

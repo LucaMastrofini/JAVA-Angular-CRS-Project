@@ -1,0 +1,14 @@
+{
+  "name": "json-server-api",
+  "version": "1.0.0",
+  "description": "dummy API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luca",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

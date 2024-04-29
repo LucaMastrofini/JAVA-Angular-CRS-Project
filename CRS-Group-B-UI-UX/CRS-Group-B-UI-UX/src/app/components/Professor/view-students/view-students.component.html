@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <select class="form-select" id="studentSelect" (change)="getStudents($any($event.target).value)">
+                <option selected value=0>Select Course</option>
+                <option *ngFor="let course of courses" value="{{course.courseID}}">{{course.name}}</option>
+            </select>
+        </div>
+        <div class="col-md-9">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width:20%">Student ID</th>
+                        <th scope="col" style="width:45%">Student Name</th>
+                        <th scope="col" style="width:35%">Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let grade of grades">
+                        <th scope="row">{{grade.student.studentID}}</th>
+                        <td>{{grade.student.name}}</td>
+                        <td *ngIf="!checkId(grade.student.studentID)">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    {{grade.grade}}
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn-sm btn-blue p-1" style="width: 100%"
+                                        (click)="editToggle(grade.student.studentID, grade.grade)">Edit</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td *ngIf="checkId(grade.student.studentID)">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-control" id="grade" name="grade" type="number"
+                                        [(ngModel)]="model">
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn-sm btn-blue p-1" style="width: 100%"
+                                        (click)="saveGrade(grade)">Save</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

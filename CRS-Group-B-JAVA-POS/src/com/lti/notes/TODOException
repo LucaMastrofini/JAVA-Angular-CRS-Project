@@ -1,0 +1,35 @@
+1. StudentNotFound
+	Professor -> recordGrade
+	admin -> registerStudent
+	
+2. CourseNotFound
+	student -> applyToCourse, dropCourse
+	professor -> applyToCourse, checkStudents, recordGrade
+	admin -> updateCourse(selectid Id, prereqID), deleteCourse, createCourse(prereqID), 
+	
+3. UsernameUsed
+	student -> studentRegistration
+	admin -> createProfessor
+	
+4. CourseAlreadyRegistered
+	professor -> applyToCourse
+	student -> applyToCourse
+	
+5. CourseIsFull
+	student -> applyToCourse
+
+6. PaymentAllPaid
+	student -> makePayment
+	(should check amout once implemented)
+	 
+	
+7. Handle in app scanner errors.  and change the nextInt into nextLine()
+
+
+handle different messages when student types wrong credentials vs unregistered
+handle throw clause on getStudentID in service professor -> if course is not found throw error
+professorService.checkStudents ->handle different message between no student in course and course that hasn't been enrolled
+handle student registration -> student not found
+put commends in the constants by adding spacing.
+add @ where throws in service layer
+add back option when you you login to screen* 

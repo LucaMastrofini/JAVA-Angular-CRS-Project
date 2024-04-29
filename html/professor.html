@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>CRS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md" style="padding-bottom: 0px;  padding-top: 0px;  padding-right: 0px;  padding-left: 0px;  height: 50px;">
+      <div class="container-fluid nav-div">
+
+        <a class="navbar-link" href="#" style="padding-bottom: 15px; padding-left: 15px;  padding-top: 15px;  padding-right: 15px; height: 50px, color:white;" >Home</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-bars" style="color: white"></i></button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a href="#login" data-toggle="modal" data-target="#login" class="nav-link" style="padding-bottom: 15px; padding-left: 15px;  padding-top: 15px;  padding-right: 15px; height: 50px, color:white;">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Professor Portal</h1>
+      <p class="lead">Apply to courses, record grades and view your students</p>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+      <h4>View Students</h4>
+      <form action="" method="POST" id="login">
+        <div class="form-group">
+          <label>Course ID</label>
+          <input class="form-control" id="courseID" name="courseID" type="number" placeholder="Enter Course ID"  required>
+        </div>
+        <button class="btn btn-block btn-light" type="submit" name="login-submit" id="login-submit" style="font-size: 20px;">Search <i class="fa fa-search"></i></button>
+      </form>
+      <hr>
+       <button class="btn btn-block btn-light">
+         <a type="button" href="#apply-course" data-toggle="modal" data-target="#apply-course" style="font-size: 20px;" title="Create Game" >
+           <div class="mb-1" style="text-align: center;">
+             Apply to course <i class="fa fa-plus"></i>
+           </div>
+         </a>
+       </button>
+       <button class="btn btn-block btn-light">
+         <a type="button"  href="#record-grade" data-toggle="modal" data-target="#record-grade" style="font-size: 20px;" title="Create Game" >
+           <div class="mb-1" style="text-align: center;">
+             Record Grade <i class="fa fa-edit"></i>
+           </div>
+         </a>
+       </button>
+     </div>
+
+     <div class="col-md-9">
+         <h3 class="text-center">Students of Course: Biology ID: 2</h3>
+         <br>
+         <table class="table">
+          <thead class="table-head">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>60</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- applay course modal -->
+  <div id="apply-course" class="modal fade login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header myheader">
+          <h2 class="modal-title">Update Course</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!--action form-->
+          <form action="" method="POST" id="login">
+            <div class="form-group">
+              <label>Course ID</label>
+              <input class="form-control" id="courseID" name="courseID" type="number" placeholder="Enter Course ID"  required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" name="submit-course" style="font-size: 20px;" id="submit-course">Apply</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- record grade -->
+  <div id="record-grade" class="modal fade login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header myheader">
+          <h2 class="modal-title">Record Grade</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!--action form-->
+          <form action="" method="POST" id="login">
+            <div class="form-group">
+              <label>Student ID</label>
+              <input class="form-control" id="courseID" name="courseID" type="number" placeholder="Enter Course ID"  required>
+            </div>
+            <div class="form-group">
+              <label>Course ID</label>
+              <input class="form-control" id="courseID" name="courseID" type="number" placeholder="Enter Course ID"  required>
+            </div>
+            <div class="form-group">
+              <label>Grade</label>
+              <input class="form-control" id="courseID" name="courseID" type="number" placeholder="Enter Course ID"  required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" name="login-submit" id="login-submit">record</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>

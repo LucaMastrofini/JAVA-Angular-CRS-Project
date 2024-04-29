@@ -1,0 +1,45 @@
+<div class="col-md-12">
+    <h3 appCenter>My Courses</h3>
+    <br>
+    <div class="container">
+        <div class="row">
+            <!-- *ngFor="let course of getData"  -->
+            <div *ngFor="let myCourse of myCourses" class="col-md-4">
+                <div class="card" style="margin-bottom: 16px">
+                    <div class="card-header p-2">
+                        ID: {{myCourse.course.courseID}}
+                    </div>
+                    <div class="card-body p-2">
+                        <h3 class="card-text">{{myCourse.course.name}}</h3>
+                        <p class="card-text">Department: {{myCourse.course.department}}</p>
+                        <p>{{myCourse.course.description}}</p>
+                    </div>
+                    <div class="card-footer p-2">
+                        <div class="container p-0">
+                            <div *ngIf="myCourse.feePaid" class="row">
+                                <div class="col-6 p-2">
+                                </div>
+                                <div class="d-flex flex-row-reverse p-2">
+                                    <button type="button" disabled
+                                        class="btn-sm btn-outline-primary p-1 m-1">Registration Confirmed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="!myCourse.feePaid" class="row">
+
+                            <div class="col-6 p-2">
+                            </div>
+                            <div class="d-flex flex-row-reverse p-2">
+                                <button type="button" class="btn-sm btn-blue p-1 m-1"
+                                    (click)="payCourse(myCourse)">Pay</button>
+                                <button type="button" class="btn-sm btn-red p-1 m-1"
+                                    (click)="dropCourse(myCourse)">Drop</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

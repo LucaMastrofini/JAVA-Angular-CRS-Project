@@ -6,29 +6,29 @@ Welcome to the repository of projects developed during my 3-month training at LT
 
 During my training, I worked on a variety of projects, each aimed at enhancing my skills and understanding of different technologies and concepts. The central theme across all projects is the development of an application for a college or university environment. The application allows students, teachers, and administrators to perform various tasks such as course enrollment, course management, and user authentication.
 
-## Projects
+## Technoligies
 
-### 1. Basic Java Project
+### 1. Basic Java
 
 The first project is a fundamental Java application that lays the groundwork for subsequent projects. It includes basic functionalities such as user authentication, course enrollment, and course management.
 
-### 2. Spring JDBC Project
+### 2. Spring JDBC
 
 Building upon the basic Java project, this project integrates Spring JDBC for database connectivity. It enhances the application with more robust database operations and structured data access.
 
-### 3. Spring Boot Project
+### 3. Spring Boot
 
 In this project, I utilized Spring Boot to simplify the setup and configuration of the application. Spring Boot's auto-configuration capabilities streamline development, allowing for faster implementation of features.
 
-### 4. Eureka Microservices Project
+### 4. Eureka Microservices
 
 Moving towards a microservices architecture, this project implements service discovery using Eureka. It breaks down the application into smaller, independently deployable services, improving scalability and resilience.
 
-### 5. Spring RESTful API Project
+### 5. Spring RESTful API
 
 This project focuses on building a RESTful API using Spring. It enables seamless communication between the client and server, following best practices for RESTful design and resource management.
 
-### 6. Angular Client Project
+### 6. Angular Client
 
 The final project in the series incorporates an Angular-based client-side application. It provides a modern and responsive user interface for interacting with the backend services, offering an enhanced user experience.
 

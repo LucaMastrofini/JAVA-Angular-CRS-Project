@@ -6,7 +6,7 @@ Welcome to the repository of projects developed during my 3-month training at LT
 
 During my training, I worked on a variety of projects, each aimed at enhancing my skills and understanding of different technologies and concepts. The central theme across all projects is the development of an application for a college or university environment. The application allows students, teachers, and administrators to perform various tasks such as course enrollment, course management, and user authentication.
 
-## Technoligies
+## Technologies
 
 ### 1. Basic Java
 
